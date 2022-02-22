@@ -25,29 +25,32 @@ const ids = {
   invalidIds: [],
 };
 
-for (let index = 0; index < idArray.length; index++) {
-  const currentId = idArray[index];
-  //   console.log("current id ", currentId);
+// regex  numbs only g for everyinstance
 
-  // regex  numbs only g for everyinstance
+const pushToCorrectArray = (id, index) => {
+  //   console.log("current id ", currentId, isLettersOnly);
   const numbsOnlyRegex = /^[0-9]*$/;
   const lettersOnlyRegex = /^[a-zA-Z]*$/;
   const lettersAndNumberRegex = /^[0-9a-zA-Z]*$/;
-  const isNumbersOnly = currentId.match(numbsOnlyRegex);
-  const isLettersOnly = currentId.match(lettersOnlyRegex);
-  const isLettersAndNumbersOnly = currentId.match(lettersAndNumberRegex);
-
-  //   console.log("current id ", currentId, isLettersOnly);
+  const isNumbersOnly = id.match(numbsOnlyRegex);
+  const isLettersOnly = id.match(lettersOnlyRegex);
+  const isLettersAndNumbersOnly = id.match(lettersAndNumberRegex);
   if (isNumbersOnly) {
-    ids.numberIds.push(currentId);
-    ids.validIds.push(currentId);
+    ids.numberIds.push(id);
+    ids.validIds.push(id);
   } else if (isLettersOnly) {
-    ids.letterIds.push(currentId);
-    ids.validIds.push(currentId);
+    ids.letterIds.push(id);
+    ids.validIds.push(id);
   } else if (isLettersAndNumbersOnly) {
-    ids.validIds.push(currentId);
+    ids.validIds.push(id);
   } else {
-    ids.invalidIds.push({id: currentId, index: index});
+    ids.invalidIds.push({ id, index });
   }
+};
+
+for (let index = 0; index < idArray.length; index++) {
+  const currentId = idArray[index];
+  pushToCorrectArray(currentId, index);
+  //   console.log("current id ", currentId);
 }
 console.log(ids);
