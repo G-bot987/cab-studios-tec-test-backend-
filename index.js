@@ -25,7 +25,6 @@ const ids = {
   invalidIds: [],
 };
 
-// regex  numbs only g for everyinstance
 const isNumbersOnly = (id) => {
   const numbsOnlyRegex = /^[0-9]*$/;
 
@@ -45,8 +44,6 @@ const isLetterAndNumbersOnly = (id) => {
 };
 
 const pushToCorrectArray = (id, index) => {
-  //   console.log("current id ", currentId, isLettersOnly);
-
   if (isNumbersOnly(id)) {
     ids.numberIds.push(id);
     ids.validIds.push(id);
@@ -60,9 +57,5 @@ const pushToCorrectArray = (id, index) => {
   }
 };
 
-for (let index = 0; index < idArray.length; index++) {
-  const currentId = idArray[index];
-  pushToCorrectArray(currentId, index);
-  //   console.log("current id ", currentId);
-}
+idArray.map((id, index) => pushToCorrectArray(id, index));
 console.log(ids);
