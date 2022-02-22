@@ -1,0 +1,23 @@
+{
+  "name": "cab-studios-backend",
+  "version": "1.0.0",
+  "description": "restful api for validating ids",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G-bot987/cab-studios-tec-test-backend-.git"
+  },
+  "author": "Georgia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/G-bot987/cab-studios-tec-test-backend-/issues"
+  },
+  "homepage": "https://github.com/G-bot987/cab-studios-tec-test-backend-#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
