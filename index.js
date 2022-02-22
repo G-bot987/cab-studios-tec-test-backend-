@@ -16,7 +16,6 @@ const idArray = [
   `hKeXz`,
   `76243`,
 ];
-
 // an object with arrays to push ids too.map
 const ids = {
   validIds: [],
@@ -57,5 +56,16 @@ const pushToCorrectArray = (id, index) => {
   }
 };
 
-idArray.map((id, index) => pushToCorrectArray(id, index));
 console.log(ids);
+
+const mapOverIds = () =>
+  idArray.map((id, index) => pushToCorrectArray(id, index));
+
+const getIds = () => {
+  return ids;
+};
+
+module.exports = {
+  getIds,
+  mapOverIds,
+};
