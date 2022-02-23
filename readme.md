@@ -1,10 +1,13 @@
 To start
- repo here:
+ repo here: https://github.com/G-bot987/cab-studios-tec-test-backend-
 
- npm i
+Local Usage:
+    npm i
+    npm start 
 
- npm start 
-
- endpoints:
-
+ endpoints;
+    Numbered Ids: /ids/number
+    Lettered Ids: /ids/letter
+    Ids: /ids/valid
+    Invalid Ids: /ids/invalid
  
