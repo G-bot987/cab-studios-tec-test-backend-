@@ -6,8 +6,8 @@ Local Usage:
     npm start 
 
  endpoints;
-    Numbered Ids: /ids/number
-    Lettered Ids: /ids/letter
-    Ids: /ids/valid
-    Invalid Ids: /ids/invalid
+    Numbered Ids: localhost:3000/ids/number
+    Lettered Ids: localhost:3000/ids/letter
+    Ids: localhost:3000/ids/valid
+    Invalid Ids: localhost:3000/ids/invalid
  
